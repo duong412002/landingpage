@@ -1,0 +1,43 @@
+.header {
+    padding-top: 45.62px;
+    padding-bottom: 137px;
+    &-container {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-auth {
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        gap: 0 30px;
+        font-weight: 500;
+    }
+    &-signin {
+        color: $heading-color;
+    }
+    .menu-item a::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: $primary-color;
+        transform: translateY(5px);
+        margin: auto;
+        display: block;
+        transition: width 0.2s linear;
+        
+    }
+    .menu-item a:hover::after {
+        width: 100%;     
+    }
+}
+@media screen and (max-width: 1023.98px) {
+    .header {
+        padding: 25px 0 50px;
+    }
+    .header-auth {
+        display: none;
+    }
+
+}
